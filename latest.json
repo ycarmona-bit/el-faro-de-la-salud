@@ -1,0 +1,513 @@
+{
+  "fecha": "2026-10-14",
+  "fecha_texto": "Miércoles 14 de octubre de 2026",
+  "edicion": 1,
+  "lede": "La competencia se movió esta semana: Venemergencia sumó una embajadora y ya es aliado de una aseguradora. Un actor nuevo, Chevere Salud, patrocina el bloque HealthTech del Startup Venezuela Summit. Octubre Rosa y la fiebre amarilla marcan el contenido.",
+  "noticias": [
+    {
+      "id": "venem-embajadora",
+      "rel": "rel",
+      "cat": "comp",
+      "lead": true,
+      "date": "8 oct",
+      "source": "Grupo Venemergencia en X",
+      "title": "Venemergencia ficha a Shirley Varnagy como embajadora y saca pecho con sus números",
+      "dek": "El competidor directo de Urgencias Nueve Once suma una cara conocida a su marca justo cuando publica más de 49.000 atenciones en casa en 2026.",
+      "body": [
+        "El 8 de octubre, Grupo Venemergencia presentó a la periodista Shirley Varnagy como nueva embajadora de marca, asociándola a valores como cercanía y compromiso con Venezuela.",
+        "Días antes, el grupo publicó que en lo que va de año suma más de 49.000 atenciones médicas en casa y una resolución por telemedicina superior al 80%. El 1 de octubre también destacó su certificación internacional como plataforma de mejora continua.",
+        "Contexto: en junio adelantó el lanzamiento de Venemergencia Air para apoyar la respuesta a los terremotos, y en febrero lideró el operativo médico de la Maratón CAF con 537 pacientes atendidos. Su logo de Urgent Care aparece además entre los aliados del Startup Venezuela Summit."
+      ],
+      "why": "Es competencia directa en domicilio, telemedicina y urgencias, y ahora apuesta por vocería de figura pública y presencia en el ecosistema tech.",
+      "next": "Hacer benchmark de la campaña con la embajadora y revisar cómo estamos contando nuestra atención domiciliaria y telemedicina.",
+      "url": "https://x.com/Venemergencia",
+      "img": "https://i0.wp.com/www.venemergencia.com/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-27-at-3.16.44-PM-1024x576.jpeg",
+      "cap": "Foto: Venemergencia (Venemergencia Air, junio)",
+      "links": [
+        [
+          "Nota sobre Venemergencia Air",
+          "https://venemergencia.com/venemergencia-air-despego-por-los-venezolanos/"
+        ],
+        [
+          "Operativo Maratón CAF",
+          "https://www.venemergencia.com/noticias/venemergencia-garantiza-atencion-medica-en-la-maraton-caf-2026/"
+        ]
+      ]
+    },
+    {
+      "id": "chevere",
+      "rel": "rel",
+      "cat": "new",
+      "isNew": true,
+      "date": "23 oct",
+      "source": "Startup Venezuela Summit",
+      "title": "Chevere Salud patrocina el bloque HealthTech del Startup Venezuela Summit",
+      "dek": "Un actor de salud que no estaba en el radar se pone frente a founders e inversionistas de todo el país.",
+      "body": [
+        "La agenda del Startup Venezuela Summit incluye el 23 de octubre a las 10:15 a. m. un bloque de pitches de HealthTech, Bienestar y Longevidad, con startups de telemedicina, bienestar, longevidad y nutrición personalizada. El patrocinante del bloque es Chevere Salud.",
+        "El mismo evento tendrá una charla de n8n sobre agentes de IA y automatización (22 de octubre, 2:50 p. m.) y una demo de IA en vivo (23 de octubre, 4:00 p. m.)."
+      ],
+      "why": "Es una marca de salud invirtiendo en visibilidad dentro del ecosistema de innovación, justo el espacio donde Nueve Once puede posicionarse como salud digital.",
+      "next": "Investigar qué es Chevere Salud y su oferta, y evaluar si Nueve Once asiste al bloque HealthTech.",
+      "url": "https://www.startupvenezuelasummit.com/",
+      "img": "https://cdn.prod.website-files.com/67ab48d2235a321b2bb33edd/6aa1d8ab5d90db6c2d07f299_Dise%C3%B1o%20sin%20t%C3%ADtulo.png",
+      "cap": "Imagen: Startup Venezuela Summit",
+      "links": []
+    },
+    {
+      "id": "seguros-venezuela",
+      "rel": "rel",
+      "cat": "seg",
+      "date": "10 sep",
+      "img": "https://www.revistabusinessvenezuela.com/wp-content/uploads/2026/09/SV-9-9.jpg",
+      "cap": "Foto: Revista Business Venezuela",
+      "source": "Revista Business Venezuela",
+      "title": "Seguros Venezuela empuja su póliza individual con Venemergencia como aliado",
+      "dek": "Más de mil proveedores, telemedicina y reembolsos en 7 días: la aseguradora arma su red y el competidor ya está adentro.",
+      "body": [
+        "Seguros Venezuela impulsa su Póliza de Salud Individual como alternativa a la tradicional póliza HCM, con cuatro planes de suma asegurada que van de 50.000 a 500.000 dólares.",
+        "La oferta incluye telemedicina, atención domiciliaria, entrega de medicamentos y traslados de emergencia, con una red de más de mil proveedores. Para atención primaria, domiciliaria y traslados, la aseguradora se apoya en una alianza con Venemergencia.",
+        "Según cifras de la Cámara de Aseguradores citadas en el reportaje, menos del 6% de la población tiene póliza de salud privada. La aseguradora promete reembolsos en 7 días, frente a 15 a 30 días del promedio del mercado.",
+        "Un dato clave: muchos venezolanos en el exterior compran estas pólizas para sus familiares en el país y gestionan la atención a distancia, por ejemplo mediante un chatbot."
+      ],
+      "why": "Las aseguradoras están armando sus redes de proveedores, y la diáspora que paga la salud de su familia es un público en crecimiento. Quien no esté en esas redes queda fuera del canal.",
+      "next": "Compartir con comercial y mapear aseguradoras que aún no tengan aliado de traslados y domicilio.",
+      "url": "https://www.revistabusinessvenezuela.com/seguros-venezuela-impulsa-poliza-de-salud-individual-para-ampliar-la-proteccion-medica-en-el-pais/",
+      "links": []
+    },
+    {
+      "id": "venem-corredores",
+      "rel": "rel",
+      "cat": "comp",
+      "date": "Agosto",
+      "source": "Nota de prensa de Venemergencia",
+      "title": "Venemergencia reúne a 70 corredores de seguros para su red Urgent Care",
+      "dek": "El encuentro en Acarigua muestra cómo el competidor trabaja el canal de corredores cara a cara.",
+      "body": [
+        "El 29 de julio, Grupo Venemergencia reunió a cerca de 70 corredores de seguros y representantes de aseguradoras en la Clínica CEMELL de Acarigua, estado Portuguesa.",
+        "El objetivo fue consolidar la operación de su Red de Aliados Urgent Care en la región, con atención personalizada a los corredores para resolver casos y dar seguimiento a cada solicitud.",
+        "Su presidente ejecutivo explicó que la meta es resolver por videoconsulta desde casa y gestionar el envío de medicamentos. La clínica aliada propuso repetir estos encuentros entre médicos, analistas y corredores de forma periódica."
+      ],
+      "why": "Los corredores recomiendan proveedores a sus clientes. Venemergencia está ganando esa relación con eventos presenciales.",
+      "next": "Evaluar un encuentro propio con corredores en Caracas para el próximo trimestre.",
+      "url": "https://venemergencia.com/noticias/grupo-venemergencia-potencia-su-red-de-aliados-urgent-care-con-exitoso-encuentro-en-acarigua/",
+      "img": "https://i0.wp.com/www.venemergencia.com/wp-content/uploads/2026/08/IMG_3903-1-scaled-e1786133840304-1024x795.jpg",
+      "cap": "Foto: Venemergencia",
+      "links": []
+    },
+    {
+      "id": "octubre-rosa",
+      "rel": "rel",
+      "cat": "cont",
+      "date": "5 y 6 oct",
+      "source": "MinSalud y La Web de la Salud",
+      "title": "Octubre Rosa: puntos rosas en Barinas y alerta de cáncer de mama en hombres",
+      "dek": "El tema del mes tiene un ángulo poco contado que encaja con el tono cercano de la marca.",
+      "body": [
+        "MinSalud, a través de su dirección estadal en Barinas, activó jornadas de atención integral y puntos rosas para la prevención y detección temprana del cáncer de mama.",
+        "En paralelo, se difundió un llamado a que los hombres también consulten ante cualquier síntoma, ya que el cáncer de mama no es exclusivo de las mujeres."
+      ],
+      "why": "Es el tema de agenda del mes y permite contenido educativo para Nueve Once, Urgencias Nueve Once y PAM Baruta.",
+      "next": "Publicar una pieza esta semana, idealmente con el ángulo de los hombres, validada por el equipo médico.",
+      "url": "https://mpps.gob.ve/noticias/",
+      "links": [
+        [
+          "La Web de la Salud",
+          "https://lawebdelasalud.com/venezuela-emite-alerta-sanitaria-por-fenomeno-el-nino/attachment/salud-venezuela"
+        ]
+      ]
+    },
+    {
+      "id": "fiebre-amarilla",
+      "rel": "rel",
+      "cat": "epi",
+      "date": "6 oct",
+      "source": "La Web de la Salud, MinSalud y UCV",
+      "title": "Fiebre amarilla: cinco estados concentran los casos y la vacunación sigue baja",
+      "dek": "Un tema de prevención con alta búsqueda y una excusa clara para explicar cuándo acudir a urgencias.",
+      "body": [
+        "Un reporte del 6 de octubre señala que cinco estados concentran el mayor número de casos de fiebre amarilla en el país.",
+        "El boletín epidemiológico de MinSalud de la semana 13 registraba 38 casos confirmados en 14 entidades y más de 794.000 dosis aplicadas en el primer trimestre. Un trabajo publicado en el repositorio de la UCV sitúa la cobertura de vacunación cerca del 56%.",
+        "La recomendación oficial es vacunarse al menos 10 días antes de viajar a zonas de riesgo."
+      ],
+      "why": "Genera búsquedas y dudas. Contenido útil posiciona a la marca como referente confiable.",
+      "next": "Carrusel de síntomas, vacuna y señales de alarma, revisado por el equipo médico antes de publicar.",
+      "url": "https://lawebdelasalud.com/venezuela-emite-alerta-sanitaria-por-fenomeno-el-nino/attachment/salud-venezuela",
+      "links": [
+        [
+          "Boletín epidemiológico MinSalud",
+          "https://mpps.gob.ve/wp-content/uploads/2026/04/13-BOLETIN-EPIDEMIOLOGICO-SEMANA-13-2026-enviado.pdf"
+        ],
+        [
+          "Estudio UCV",
+          "https://saber.ucv.ve/handle/10872/24214"
+        ]
+      ]
+    },
+    {
+      "id": "vargas",
+      "rel": "maybe",
+      "cat": "gov",
+      "date": "6 oct",
+      "source": "MinSalud",
+      "title": "Delcy Rodríguez inspecciona la rehabilitación integral del Hospital Vargas",
+      "dek": "Inversión pública en un hospital de referencia de Caracas.",
+      "body": [
+        "La presidenta Delcy Rodríguez visitó el Hospital José María Vargas para constatar el avance de los trabajos de rehabilitación y modernización que ejecuta el Gobierno."
+      ],
+      "why": "Contexto del sector en Caracas; puede cambiar flujos de pacientes en el centro de la ciudad.",
+      "next": "Solo seguimiento, sin acción inmediata.",
+      "url": "https://mpps.gob.ve/noticias/",
+      "links": []
+    },
+    {
+      "id": "vensalud",
+      "rel": "maybe",
+      "cat": "gov",
+      "date": "Esta semana",
+      "source": "teleSUR",
+      "title": "Vensalud anuncia 1.874 equipos médicos para la red pública",
+      "dek": "Primera fase de un plan de modernización con tomógrafos y equipos quirúrgicos.",
+      "body": [
+        "La presidenta de Vensalud, María Gabriela Pulido, explicó que la primera fase del plan contempla 1.874 equipos para diagnóstico y atención quirúrgica, financiados con recursos desbloqueados. Se anuncian quirófanos, radioterapia y laboratorios en los próximos meses."
+      ],
+      "why": "Más capacidad pública puede cambiar a dónde se derivan pacientes.",
+      "next": "Seguimiento.",
+      "url": "https://telesurtv.net/vensalud-tecnologia-medica-sistema-sanitario",
+      "links": []
+    },
+    {
+      "id": "plan-salud",
+      "rel": "maybe",
+      "cat": "cli",
+      "date": "Abril (referencia)",
+      "source": "Ciudad Valencia",
+      "title": "Plan de Salud y Vida suma 341 prestadores privados",
+      "dek": "El Gobierno apuesta por alianzas público-privadas para cirugías.",
+      "body": [
+        "El convenio del Plan de Salud y Vida 2026 contaba con 341 prestadores privados y aseguradoras públicas para agilizar soluciones quirúrgicas, con la meta de atender 40.000 pacientes en el año."
+      ],
+      "why": "Podría ser una vía de alianza público-privada.",
+      "next": "Que dirección evalúe si conviene participar.",
+      "url": "https://www.ciudadvalencia.com.ve/plan-salud-vida-2/",
+      "links": []
+    },
+    {
+      "id": "cateterismos",
+      "rel": "maybe",
+      "cat": "gov",
+      "date": "10 oct",
+      "source": "Ciudad BQTO",
+      "title": "Sector público supera casi 3.000 cateterismos cardíacos",
+      "dek": "Hito en hemodinamia de la red pública.",
+      "body": [
+        "Medios oficiales reportan que el sector público superó un hito histórico en hemodinamia, con casi 3.000 cateterismos cardíacos realizados en el país."
+      ],
+      "why": "Señal de recuperación de capacidad cardiovascular pública.",
+      "next": "Seguimiento.",
+      "url": "https://ciudadbqto.com/2026/10/10/venezuela-participa-en-el-ii-foro-digital-global-en-moscu-para-fortalecer-la-cooperacion-en-inteligencia-artificial-y-ciberseguridad/",
+      "links": []
+    },
+    {
+      "id": "camilleros",
+      "rel": "maybe",
+      "cat": "form",
+      "date": "2 oct",
+      "source": "Insalud Carabobo",
+      "title": "Insalud certifica a 107 camilleros en Carabobo",
+      "dek": "Demanda visible de formación en traslado de pacientes.",
+      "body": [
+        "Insalud certificó a 107 camilleros para optimizar la atención y el traslado intra y extrahospitalario de pacientes en Carabobo."
+      ],
+      "why": "Útil si ofrecemos o queremos ofrecer capacitación en traslado.",
+      "next": "Evaluar oferta de formación.",
+      "url": "https://insalud.gob.ve/",
+      "links": []
+    },
+    {
+      "id": "higuerote",
+      "rel": "maybe",
+      "cat": "com",
+      "date": "28 sep",
+      "source": "AVN",
+      "title": "Miranda hace jornada médica en Higuerote con más de 2.200 atenciones",
+      "dek": "Autoridades de Miranda activas con jornadas comunitarias.",
+      "body": [
+        "La jornada concentró consultas, entrega de medicamentos, despistajes y cirugías del Plan Quirúrgico Nacional en el Hospital de Higuerote."
+      ],
+      "why": "Posible puerta para colaboraciones en el estado.",
+      "next": "Explorar contacto con la red de salud de Miranda.",
+      "url": "https://avn.info.ve/miranda-jornada-salud-sanitaria-medica-social/",
+      "img": "https://avn.info.ve/wp-content/uploads/2026/09/IMG_20260928_113644_553.jpg",
+      "cap": "Foto: AVN",
+      "links": []
+    },
+    {
+      "id": "pantoja",
+      "rel": "no",
+      "cat": "cli",
+      "date": "16 sep",
+      "source": "Confirmado",
+      "title": "Dr. Pedro Pantoja abre sede de cirugía estética en el CCCT",
+      "dek": "Apertura en Caracas del segmento estético.",
+      "body": [
+        "El cirujano plástico abrió nueva sede en la Torre D del CCCT con servicios de cirugía estética y reconstructiva."
+      ],
+      "why": "Fuera del core de urgencias y atención primaria.",
+      "next": "Ninguno.",
+      "url": "https://confirmado.com.ve/el-dr-pedro-pantoja-inaugura-nueva-sede-clinica-en-el-ccct-de-caracas/",
+      "links": []
+    },
+    {
+      "id": "cayapa",
+      "rel": "no",
+      "cat": "gov",
+      "date": "2 oct",
+      "source": "AVN",
+      "title": "Plan Cayapa rehabilita una clínica popular en Maracaibo",
+      "dek": "Obra pública fuera de la zona de operación.",
+      "body": [
+        "Arrancó la rehabilitación integral de la Clínica Popular Kléber Ramírez Rojas, que atiende a 99 comunidades del oeste de Maracaibo."
+      ],
+      "why": "Fuera de la zona de operación en Caracas.",
+      "next": "Ninguno.",
+      "url": "https://avn.info.ve/plan-cayapa-de-la-salud-inicia-rehabilitacion-de-clinica-popular-para-la-atencion-de-cinco-parroquias-marabinas/",
+      "links": []
+    },
+    {
+      "id": "ops-sucre",
+      "rel": "no",
+      "cat": "int",
+      "date": "8 oct",
+      "source": "OPS",
+      "title": "OPS rehabilita salas de rehidratación oral en Sucre",
+      "dek": "Cooperación internacional regional.",
+      "body": [
+        "La OPS entregó insumos y rehabilitó cinco salas de rehidratación oral en establecimientos del estado Sucre."
+      ],
+      "why": "Sin relación directa con el negocio.",
+      "next": "Ninguno.",
+      "url": "https://www.paho.org/es/venezuela-republica-bolivariana",
+      "links": []
+    },
+    {
+      "id": "ops-premio",
+      "rel": "no",
+      "cat": "int",
+      "date": "30 sep",
+      "source": "OPS",
+      "title": "OPS premia a la Dra. Noly Fernández por su trabajo en salud indígena",
+      "dek": "Reconocimiento a una médica venezolana.",
+      "body": [
+        "La OPS entregó su premio a la gestión y liderazgo en servicios de salud 2026 a la Dra. Noly Fernández por sus aportes a la salud indígena e intercultural."
+      ],
+      "why": "Valioso, sin ángulo para la marca.",
+      "next": "Ninguno.",
+      "url": "https://www.paho.org/es/venezuela-republica-bolivariana",
+      "links": []
+    }
+  ],
+  "eventos": [
+    {
+      "m": "Octubre",
+      "date": "13–16 oct",
+      "day": "En curso",
+      "kind": [
+        "med"
+      ],
+      "type": "Congreso",
+      "color": "rose",
+      "rel": "maybe",
+      "title": "XI Congreso Internacional de Medicina de Urgencias y Desastres (AMUDEM)",
+      "where": "México, presencial",
+      "desc": "Referente internacional en RCP y atención prehospitalaria para el equipo médico de Urgencias.",
+      "cta": "Comprar admisión",
+      "url": "https://amudem.org/ejes-tematicos/"
+    },
+    {
+      "m": "Octubre",
+      "date": "20 oct",
+      "day": "Martes, 6:30 p. m.",
+      "kind": [
+        "tech"
+      ],
+      "type": "Networking",
+      "color": "lilac",
+      "rel": "maybe",
+      "title": "Open House Casa 212",
+      "where": "Caracas, solo con invitación",
+      "desc": "Encuentro de la residencia de founders previo al Startup Venezuela Summit.",
+      "cta": "Solicitar invitación",
+      "url": "https://luma.com/uiwa2ll2"
+    },
+    {
+      "m": "Octubre",
+      "date": "21–23 oct",
+      "day": "Mié a vie",
+      "kind": [
+        "tech"
+      ],
+      "type": "Summit",
+      "color": "sky",
+      "rel": "rel",
+      "title": "Startup Venezuela Summit 2026",
+      "where": "Caracas, cupos limitados",
+      "desc": "Tres días de IA, talento, capital y tecnología con speakers globales.",
+      "details": [
+        "21 oct: apertura con Richard Branson y Capital & Venture Day.",
+        "22 oct, 2:50 p. m.: n8n y la nueva era de los agentes de IA.",
+        "23 oct, 10:15 a. m.: pitches HealthTech, patrocinados por Chevere Salud.",
+        "23 oct, 4:00 p. m.: demo de IA en vivo con n8n."
+      ],
+      "cta": "Comprar entradas",
+      "url": "https://ticketplate.com/checkout/start-up-venezuela-summit-2026-202610210800",
+      "primary": true
+    },
+    {
+      "m": "Octubre",
+      "date": "22–24 oct",
+      "day": "Jue a sáb",
+      "kind": [
+        "med"
+      ],
+      "type": "Congreso",
+      "color": "butter",
+      "rel": "maybe",
+      "title": "XXXVII Congreso Venezolano de Cirugía",
+      "where": "Hotel Hesperia WTC, Valencia",
+      "desc": "Público médico especializado, fuera de Caracas.",
+      "cta": "Ver información",
+      "url": "https://www.botica.xyz/eventos-medicos-relevantes-desde-este-mes-de-agosto-a-diciembre-de-2026/"
+    },
+    {
+      "m": "Octubre",
+      "date": "23–25 oct",
+      "day": "Vie a dom",
+      "kind": [
+        "tech"
+      ],
+      "type": "Hackathon",
+      "color": "mint",
+      "rel": "maybe",
+      "title": "Platanus Hack 26 Caracas",
+      "where": "Caracas, 36 horas, equipos de 3 a 5",
+      "desc": "Opción de proponer un reto de salud o patrocinar para captar talento tech.",
+      "cta": "Aplicar con un equipo",
+      "url": "https://hack.platan.us/26-ve/"
+    },
+    {
+      "m": "Octubre",
+      "date": "29 oct",
+      "day": "Jueves",
+      "kind": [
+        "com"
+      ],
+      "type": "Comunidad",
+      "color": "peach",
+      "rel": "maybe",
+      "title": "Fiestas patronales de Baruta",
+      "where": "Baruta",
+      "desc": "Fecha clave del municipio: presencia comunitaria para PAM Baruta.",
+      "cta": null
+    },
+    {
+      "m": "Noviembre",
+      "date": "3–7 nov",
+      "day": "Mar a sáb",
+      "kind": [
+        "tech"
+      ],
+      "type": "Summit remoto",
+      "color": "sky",
+      "rel": "rel",
+      "title": "TechEquity AI Summit 2026",
+      "where": "En línea, charlas principales gratis",
+      "desc": "IA aplicada, agentes y casos reales: formación sin costo para el equipo de content.",
+      "cta": "Registrarme",
+      "url": "https://www.getonbrd.com/events",
+      "primary": true
+    },
+    {
+      "m": "Noviembre",
+      "date": "9–13 nov",
+      "day": "Lun a vie",
+      "kind": [
+        "med"
+      ],
+      "type": "Congreso",
+      "color": "butter",
+      "rel": "maybe",
+      "title": "LXXII Congreso Venezolano de Pediatría y Puericultura",
+      "where": "Hotel Hesperia WTC, Valencia",
+      "desc": "Salud infantil, nutrición e inmunizaciones: insumo de contenido para familias.",
+      "cta": "Ver información",
+      "url": "https://www.botica.xyz/eventos-medicos-relevantes-desde-este-mes-de-agosto-a-diciembre-de-2026/"
+    },
+    {
+      "m": "Noviembre",
+      "date": "19–21 nov",
+      "day": "Jue a sáb",
+      "kind": [
+        "med"
+      ],
+      "type": "Congreso",
+      "color": "lilac",
+      "rel": "rel",
+      "title": "XXII Congreso Nacional de Oncología",
+      "where": "Eurobuilding Hotel & Suites, Caracas",
+      "desc": "En Caracas y con especialistas de todo el país: stand, patrocinio u operativo médico.",
+      "cta": "Inscribirme",
+      "url": "https://oncologia.org.ve/event/xxii-congreso-venezolano-de-oncologia-innovacion-medica-y-cuidado-humano-2026/",
+      "primary": true
+    },
+    {
+      "m": "Noviembre",
+      "date": "25–26 nov",
+      "day": "Mié y jue",
+      "kind": [
+        "tech",
+        "med"
+      ],
+      "type": "Salud digital",
+      "color": "mint",
+      "rel": "maybe",
+      "title": "XXIV Reunión de Salud Conectada y Medicina Digital (SEIS)",
+      "where": "España",
+      "desc": "IA clínica y telemedicina: vale la pena seguir sus conclusiones.",
+      "cta": "Ver programa",
+      "url": "https://seis.es/saludconectada26/"
+    },
+    {
+      "m": "Por confirmar",
+      "date": "Por confirmar",
+      "day": "2026",
+      "kind": [
+        "med"
+      ],
+      "type": "Curso",
+      "color": "rose",
+      "rel": "maybe",
+      "title": "Curso Cardiovascular de Caracas (3C) 2026",
+      "where": "Caracas, Sociedad Venezolana de Cardiología",
+      "desc": "Anunciado sin fecha publicada todavía.",
+      "cta": "Seguir novedades",
+      "url": "https://www.svcardiologia.com/noticias/"
+    },
+    {
+      "m": "Por confirmar",
+      "date": "Oct a dic",
+      "day": "Temporada",
+      "kind": [
+        "tech"
+      ],
+      "type": "Comunidad dev",
+      "color": "peach",
+      "rel": "maybe",
+      "title": "DevFest 2026 de Google Developer Groups",
+      "where": "Varias sedes",
+      "desc": "Talleres de IA y agentes; pendiente si la comunidad de Caracas anuncia fecha.",
+      "cta": "Ver temporada",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/devfest2026/"
+    }
+  ]
+}

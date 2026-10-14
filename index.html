@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>El Faro de la Salud</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#004C97;--sky:#5BC2E7;--orange:#FF6900;--grey:#666666;
+  --page:#E4F5FB;--frame:#004C97;--paper:#F7F9FB;--side:#EEF2F6;--card:#FFFFFF;
+  --ink:#0B1F33;--soft:#56657A;--line:#DCE4EC;
+  --lilac:#EBDDFB;--mint:#D3F5DD;--sky-t:#D6F0FA;--butter:#FDF0C4;--rose:#FBDDE6;--peach:#FFE3D1;
+  --lilac-in:#F4ECFD;--mint-in:#E8FAEE;--sky-in:#EAF7FC;--butter-in:#FEF7DF;--rose-in:#FDEDF2;--peach-in:#FFF1E7;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --page:#04121F;--frame:#00376E;--paper:#0A1C2E;--side:#0E2236;--card:#11283F;
+  --ink:#EAF2FA;--soft:#9FB1C5;--line:#20384F;
+  --lilac:#3A2E52;--mint:#1E4430;--sky-t:#163F55;--butter:#4A4020;--rose:#4C2836;--peach:#4E3222;
+  --lilac-in:#2E2542;--mint-in:#183626;--sky-in:#123345;--butter-in:#3B3319;--rose-in:#3D202B;--peach-in:#3E281B;
+}}
+:root[data-theme="dark"]{
+  --page:#04121F;--frame:#00376E;--paper:#0A1C2E;--side:#0E2236;--card:#11283F;
+  --ink:#EAF2FA;--soft:#9FB1C5;--line:#20384F;
+  --lilac:#3A2E52;--mint:#1E4430;--sky-t:#163F55;--butter:#4A4020;--rose:#4C2836;--peach:#4E3222;
+  --lilac-in:#2E2542;--mint-in:#183626;--sky-in:#123345;--butter-in:#3B3319;--rose-in:#3D202B;--peach-in:#3E281B;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--ink);font-family:"Figtree",Arial,Helvetica,sans-serif;font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit}
+a{color:inherit}
+.serif{font-family:"Figtree",Arial,Helvetica,sans-serif;letter-spacing:-.015em}
+.mast h1.serif{font-weight:900;letter-spacing:-.04em}
+:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+
+.shell{max-width:1320px;margin:24px auto;padding:0 20px}
+.frame{background:var(--frame);border-radius:34px;padding:0 10px 10px;box-shadow:0 30px 60px -30px rgba(0,40,90,.35)}
+.top{display:flex;align-items:center;gap:20px;padding:18px 22px 22px;color:#fff;flex-wrap:wrap}
+.brand{font-weight:800;font-size:22px;letter-spacing:-.02em;display:flex;align-items:center;gap:10px}
+.brand .dot{width:12px;height:12px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 5px rgba(255,105,0,.25)}
+.nav{display:flex;gap:6px;margin:0 auto;flex-wrap:wrap}
+.nav a{color:#fff;text-decoration:none;font-size:14.5px;font-weight:600;padding:8px 14px;border-radius:999px;opacity:.85}
+.nav a:hover,.nav a[aria-current="true"]{background:rgba(255,255,255,.14);opacity:1}
+.who{font-size:13.5px;text-align:right;line-height:1.3;opacity:.9}
+.who b{display:block;font-size:14.5px}
+.board{background:var(--paper);border-radius:26px;display:grid;grid-template-columns:minmax(0,1fr) 360px;overflow:hidden}
+
+/* main */
+main{padding:30px 32px 36px;min-width:0}
+.mast{border-bottom:3px double var(--ink);padding-bottom:14px;margin-bottom:18px}
+.mast-row{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.mast h1{margin:0;font-size:clamp(40px,5.4vw,70px);line-height:.95;font-weight:700;letter-spacing:-.02em}
+.mast .tag{font-size:15px;color:var(--soft);margin:6px 0 0}
+.dateline{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--ink);margin-top:14px;padding-top:8px;font-size:13.5px;font-weight:600;color:var(--soft)}
+.stats{display:flex;gap:10px}
+.stat{border:0;cursor:pointer;border-radius:20px;padding:12px 16px 10px;min-width:92px;text-align:center;background:var(--card);box-shadow:inset 0 0 0 1.5px var(--line)}
+.stat .n{display:block;font-size:30px;font-weight:800;line-height:1}
+.stat .l{font-size:13px;color:var(--soft);font-weight:600}
+.stat.rel{background:var(--peach)}.stat.maybe{background:var(--sky-t)}.stat.no{background:transparent;box-shadow:inset 0 0 0 1.5px var(--line);border:1.5px dashed transparent}
+.stat[aria-pressed="true"]{box-shadow:inset 0 0 0 2.5px var(--ink)}
+.lede{font-size:18px;max-width:70ch;margin:0 0 22px}
+
+.section-h{display:flex;align-items:baseline;gap:12px;margin:30px 0 14px;flex-wrap:wrap}
+.section-h h2{margin:0;font-size:30px;font-weight:700;letter-spacing:-.01em}
+.section-h p{margin:0;color:var(--soft);font-size:14.5px}
+
+/* lead */
+.lead{display:grid;grid-template-columns:1.25fr 1fr;gap:0;background:var(--card);border-radius:26px;overflow:hidden;cursor:pointer;box-shadow:0 1px 0 var(--line),0 18px 36px -24px rgba(0,40,90,.3);border:0;text-align:left;padding:0;width:100%}
+.lead .cover{min-height:300px}
+.lead .txt{padding:26px 26px 24px;display:flex;flex-direction:column;gap:10px}
+.lead h3{margin:0;font-size:clamp(26px,3vw,36px);line-height:1.08;font-weight:700}
+.kicker{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:13px;font-weight:700}
+.chip{padding:4px 10px;border-radius:999px;background:var(--side);color:var(--ink)}
+.chip.rel{background:var(--orange);color:#fff}
+.chip.maybe{background:var(--sky);color:#062033}
+.chip.no{background:var(--side);color:var(--soft)}
+.chip.new{background:var(--ink);color:var(--paper)}
+.meta{font-size:13px;color:var(--soft);font-weight:600}
+.dek{color:var(--soft);font-size:15.5px;margin:0}
+.more{margin-top:auto;font-weight:700;font-size:14.5px;color:var(--navy);display:inline-flex;gap:6px;align-items:center}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .more{color:var(--sky)}}
+:root[data-theme="dark"] .more{color:var(--sky)}
+
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:16px}
+.story{border:0;padding:0;text-align:left;cursor:pointer;background:var(--card);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 0 var(--line),0 12px 28px -22px rgba(0,40,90,.35);transition:transform .2s ease}
+.story:hover{transform:translateY(-3px)}
+.story .cover{height:150px}
+.grid .story:first-child{grid-column:span 2}.grid .story:first-child .cover{height:190px}
+@media (max-width:720px){.grid .story:first-child{grid-column:auto}}
+.story .txt{padding:16px 16px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.story h3{margin:0;font-size:20px;line-height:1.18;font-weight:700}
+.cover{position:relative;overflow:hidden}
+.cover svg,.cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.cover .photo-cap{position:absolute;left:10px;bottom:10px;background:rgba(0,0,0,.55);color:#fff;font-size:11.5px;padding:3px 8px;border-radius:8px}
+
+.briefs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px;margin-top:6px}
+.brief{border:0;background:transparent;text-align:left;cursor:pointer;padding:14px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:start;width:100%}
+.brief .mini{width:56px;height:56px;border-radius:14px;overflow:hidden;position:relative}
+.brief h4{margin:2px 0 4px;font-size:17px;line-height:1.25}
+.brief p{margin:0;color:var(--soft);font-size:14px}
+.cols-label{font-size:13px;font-weight:700;color:var(--soft);margin:22px 0 4px}
+
+/* side */
+aside{background:var(--side);padding:30px 22px 30px;border-left:1px solid var(--line);min-width:0}
+aside h2{margin:0 0 4px;font-size:30px;font-weight:700}
+aside .sub{color:var(--soft);font-size:14px;margin:0 0 14px}
+.tabs{display:flex;gap:6px;margin-bottom:16px;flex-wrap:wrap}
+.tabs button{border:0;cursor:pointer;background:var(--card);padding:7px 13px;border-radius:999px;font-size:13.5px;font-weight:700;box-shadow:inset 0 0 0 1.5px var(--line)}
+.tabs button[aria-pressed="true"]{background:var(--ink);color:var(--paper);box-shadow:none}
+.month{font-size:13px;font-weight:800;color:var(--soft);margin:18px 0 8px}
+.ev{border-radius:24px;padding:12px;margin-bottom:12px}
+.ev.c-sky{background:var(--sky-t)}.ev.c-lilac{background:var(--lilac)}.ev.c-butter{background:var(--butter)}.ev.c-mint{background:var(--mint)}.ev.c-rose{background:var(--rose)}.ev.c-peach{background:var(--peach)}
+.ev-head{display:flex;justify-content:space-between;align-items:center;padding:2px 6px 10px;font-size:13.5px;font-weight:700}
+.ev-type{display:flex;align-items:center;gap:8px}
+.ev-type svg{width:18px;height:18px}
+.ev-in{border-radius:16px;padding:12px 14px}
+.c-sky .ev-in{background:var(--sky-in)}.c-lilac .ev-in{background:var(--lilac-in)}.c-butter .ev-in{background:var(--butter-in)}.c-mint .ev-in{background:var(--mint-in)}.c-rose .ev-in{background:var(--rose-in)}.c-peach .ev-in{background:var(--peach-in)}
+.ev h3{margin:0 0 4px;font-size:16.5px;line-height:1.25}
+.ev .where{font-size:13px;color:var(--soft);font-weight:600;margin:0 0 6px}
+.ev p{margin:0;font-size:14px}
+.ev details{margin-top:8px;font-size:14px}
+.ev summary{cursor:pointer;font-weight:700;font-size:13.5px;color:var(--soft)}
+.ev ul{margin:6px 0 0;padding-left:18px}
+.ev .pills{display:flex;gap:6px;margin-bottom:8px;flex-wrap:wrap}
+.join{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:10px;background:var(--card);border-radius:14px;padding:10px 12px;font-weight:800;font-size:14.5px;text-decoration:none;color:var(--ink)}
+.join.primary{background:var(--navy);color:#fff}
+.join:hover{filter:brightness(1.05)}
+.join svg{width:16px;height:16px}
+.noticket{margin-top:10px;font-size:13px;color:var(--soft);text-align:center}
+
+/* dialog */
+dialog{border:0;padding:0;border-radius:28px;max-width:760px;width:calc(100% - 28px);background:var(--card);color:var(--ink);box-shadow:0 40px 80px -30px rgba(0,0,0,.5)}
+dialog::backdrop{background:rgba(4,18,31,.55)}
+.d-cover{height:240px;position:relative}
+.d-body{padding:24px 28px 28px}
+dialog{max-height:calc(100vh - 32px);overflow:auto}
+.d-body h2{margin:8px 0 8px;font-size:clamp(26px,3.4vw,36px);line-height:1.1;font-weight:700}
+.d-body .article p{font-size:16.5px;margin:0 0 12px;max-width:68ch}
+.why{background:var(--peach-in);border-left:5px solid var(--orange);border-radius:0 14px 14px 0;padding:12px 14px;margin:16px 0 10px}
+.next{background:var(--sky-in);border-radius:14px;padding:12px 14px;margin:0 0 16px}
+.why b,.next b{display:block;font-size:13px;margin-bottom:2px}
+.d-actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:14px;padding:11px 16px;font-weight:800;text-decoration:none;font-size:15px;border:0;cursor:pointer}
+.btn.primary{background:var(--navy);color:#fff}
+.btn.ghost{background:var(--side);color:var(--ink)}
+.close{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,255,255,.9);color:#0B1F33;cursor:pointer;font-size:20px;font-weight:700;z-index:2}
+
+footer{padding:18px 6px 0;color:var(--soft);font-size:13px}
+.see-all{display:block;text-align:center;font-weight:800;font-size:14.5px;color:var(--ink);text-decoration:underline;text-underline-offset:3px;margin-top:6px}
+.agenda-full{grid-column:1/-1;padding:30px 32px 34px;border-top:1px solid var(--line)}
+.agenda-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:6px}
+.agenda-head h2{margin:0 0 4px;font-size:30px;font-weight:700}
+.agenda-head .sub{margin:0}
+.agenda-head .tabs{margin:0}
+.ev-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;align-items:start}
+.ev-grid .month{grid-column:1/-1;margin:16px 0 0;font-size:14px;border-top:1px solid var(--line);padding-top:12px}
+.ev-grid .ev{margin:0;height:100%;display:flex;flex-direction:column}
+.ev-grid .ev-in{flex:1}
+@media (max-width:1100px){.ev-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:720px){.ev-grid{grid-template-columns:1fr}.agenda-full{padding:22px 14px}}
+.hidden{display:none !important}
+
+@media (max-width:1100px){.board{grid-template-columns:1fr}aside{border-left:0;border-top:1px solid var(--line)}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:720px){
+  .shell{padding:0 8px;margin:10px auto}.frame{border-radius:24px;padding:0 6px 6px}
+  main{padding:22px 16px}aside{padding:22px 14px}
+  .lead{grid-template-columns:1fr}.lead .cover{min-height:200px}
+  .grid,.briefs{grid-template-columns:1fr}
+  .nav{order:3;width:100%;margin:0;overflow-x:auto;flex-wrap:nowrap}
+  .who{margin-left:auto}
+  .stat{min-width:0;flex:1;padding:10px 8px}.stats{width:100%}
+  .d-body{padding:20px 18px 22px}
+}
+@media (prefers-reduced-motion:reduce){.story{transition:none}.story:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="shell">
+<div class="frame">
+  <header class="top">
+    <div class="brand"><span class="dot" aria-hidden="true"></span>El Faro</div>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#portada" aria-current="true">Portada</a>
+      <a href="#agenda">Eventos</a>
+      <a href="#breves">Breves</a>
+    </nav>
+    <div class="who"><b>Mercadeo Nueve Once</b>Edición diaria</div>
+  </header>
+
+  <div class="board">
+    <main id="portada">
+      <div class="mast">
+        <div class="mast-row">
+          <div>
+            <h1 class="serif">El Faro de la Salud</h1>
+            <p class="tag">Salud, competencia e innovación en Venezuela, vista desde Nueve Once</p>
+          </div>
+          <div class="stats" role="group" aria-label="Filtrar noticias por relevancia">
+            <button class="stat rel" data-f="rel" aria-pressed="false"><span class="n" id="n-rel">0</span><span class="l">Relevantes</span></button>
+            <button class="stat maybe" data-f="maybe" aria-pressed="false"><span class="n" id="n-maybe">0</span><span class="l">Quizás</span></button>
+            <button class="stat no" data-f="no" aria-pressed="false"><span class="n" id="n-no">0</span><span class="l">No</span></button>
+          </div>
+        </div>
+        <div class="dateline"><span id="fecha">Cargando edición…</span><span id="edicion"></span><span>Caracas</span></div>
+      </div>
+
+      <p class="lede serif" id="lede"></p>
+
+      <div id="lead-wrap"></div>
+      <div class="grid" id="grid"></div>
+
+      <div id="breves">
+        <div class="section-h"><h2 class="serif">Breves</h2><p>Toca cualquier nota para ver el contexto completo.</p></div>
+        <p class="cols-label" id="lbl-maybe">Quizás</p>
+        <div class="briefs" id="briefs-maybe"></div>
+        <p class="cols-label" id="lbl-no">No por ahora</p>
+        <div class="briefs" id="briefs-no"></div>
+      </div>
+    </main>
+
+    <aside id="eventos" aria-label="Eventos">
+      <h2 class="serif">Imperdibles</h2>
+      <p class="sub">Los eventos que más le sirven a Nueve Once.</p>
+      <div id="events-top"></div>
+      <a class="see-all" href="#agenda">Ver la agenda completa</a>
+    </aside>
+
+    <section class="agenda-full" id="agenda" aria-label="Agenda de eventos">
+      <div class="agenda-head">
+        <div><h2 class="serif">Agenda de eventos</h2><p class="sub">Charlas, congresos y ponencias médicos y de tecnología, de aquí a fin de año.</p></div>
+        <div class="tabs" role="group" aria-label="Filtrar eventos">
+          <button data-k="all" aria-pressed="true">Todos</button>
+          <button data-k="med" aria-pressed="false">Médicos</button>
+          <button data-k="tech" aria-pressed="false">Tecnología</button>
+        </div>
+      </div>
+      <div class="ev-grid" id="events"></div>
+    </section>
+  </div>
+</div>
+<footer><span id="consultado"></span> Las ilustraciones de portada son de categoría; cada nota enlaza al reportaje original con sus fotos. Verifica cada dato en su enlace antes de usarlo en una pieza.</footer>
+</div>
+
+<dialog id="dlg" aria-labelledby="d-title">
+  <div class="d-cover cover" id="d-cover"><button class="close" id="d-close" aria-label="Cerrar">×</button></div>
+  <div class="d-body">
+    <div class="kicker" id="d-kicker"></div>
+    <h2 class="serif" id="d-title"></h2>
+    <div class="meta" id="d-meta"></div>
+    <div class="article" id="d-article" style="margin-top:14px"></div>
+    <div class="why" id="d-why"><b>Por qué importa a Nueve Once</b><span></span></div>
+    <div class="next" id="d-next"><b>Siguiente paso</b><span></span></div>
+    <div class="d-actions" id="d-actions"></div>
+  </div>
+</dialog>
+
+<script>
+let NEWS = [];
+
+let EVENTS = [];
+
+const CAT = {
+ comp:{label:"Competencia",bg:"#D6F0FA",fg:"#004C97",icon:'<path d="M-46 22h92M-38 22l10-26h56l10 26"/><circle cx="-24" cy="26" r="9"/><circle cx="24" cy="26" r="9"/><path d="M0-30v-14M-7-37h14"/><path d="M-60-30a70 70 0 0 1 120 0M-44-18a50 50 0 0 1 88 0"/>'},
+ new:{label:"Salud digital",bg:"#EBDDFB",fg:"#4B2A86",icon:'<path d="M0-48l10 30 30 10-30 10L0 32l-10-30-30-10 30-10z"/><circle cx="40" cy="-34" r="6"/><circle cx="-42" cy="30" r="4"/>'},
+ seg:{label:"Aseguradoras",bg:"#D3F5DD",fg:"#0E6B3A",icon:'<path d="M0-48l42 16v28c0 28-18 46-42 52-24-6-42-24-42-52v-28z"/><path d="M0-18v36M-18 0h36"/>'},
+ cont:{label:"Contenido",bg:"#FBDDE6",fg:"#A3204D",icon:'<path d="M0-40c-14-20-46-10-40 14 6 22 40 44 40 44s34-22 40-44C46-50 14-60 0-40z"/><path d="M-12 30l-14 26M12 30l14 26"/>'},
+ epi:{label:"Epidemiología",bg:"#FDF0C4",fg:"#7A5A00",icon:'<circle r="24"/><path d="M0-24v-16M0 24v16M-24 0h-16M24 0h16M17-17l11-11M-17 17l-11 11M17 17l11 11M-17-17l-11-11"/><circle cx="-8" cy="-6" r="4"/><circle cx="8" cy="6" r="5"/>'},
+ gov:{label:"Gobierno",bg:"#E3E8F0",fg:"#26405E",icon:'<path d="M-50 40h100M-44 -8h88M0-46l50 24h-100z"/><path d="M-32-8v40M-11-8v40M11-8v40M32-8v40"/>'},
+ cli:{label:"Clínicas",bg:"#D6F0FA",fg:"#004C97",icon:'<rect x="-40" y="-40" width="80" height="84" rx="8"/><path d="M0-26v28M-14-12h28M-12 44V22h24v22"/>'},
+ form:{label:"Formación",bg:"#FFE3D1",fg:"#9A3D00",icon:'<path d="M-52-6L0-32l52 26L0 20z"/><path d="M-30 6v24c18 14 42 14 60 0V6M52-6v30"/>'},
+ com:{label:"Comunidad",bg:"#FFE3D1",fg:"#9A3D00",icon:'<circle cx="-18" cy="-16" r="14"/><circle cx="22" cy="-10" r="11"/><path d="M-48 40c0-18 14-30 30-30s30 12 30 30M14 18c18 0 34 10 34 24"/>'},
+ int:{label:"Internacional",bg:"#E3E8F0",fg:"#26405E",icon:'<circle r="42"/><path d="M-42 0h84M0-42c16 18 16 66 0 84M0-42c-16 18-16 66 0 84"/>'}
+};
+
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function art(cat,seed){
+  const c=CAT[cat]||CAT.gov; let dots="";
+  for(let i=0;i<14;i++){const x=(Math.sin(seed*13+i*7.3)*.5+.5)*400,y=(Math.cos(seed*7+i*3.1)*.5+.5)*240;dots+=`<circle cx="${x.toFixed(0)}" cy="${y.toFixed(0)}" r="${(2+(i%3)*2)}" fill="${c.fg}" opacity=".18"/>`;}
+  return `<svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="240" fill="${c.bg}"/>${dots}<circle cx="300" cy="60" r="110" fill="#ffffff" opacity=".35"/><circle cx="80" cy="220" r="80" fill="#ffffff" opacity=".25"/><g transform="translate(200 122) scale(1.35)" fill="none" stroke="${c.fg}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">${c.icon}</g></svg>`;
+}
+function cover(n,i){
+  const a=art(n.cat,i+1);
+  if(!n.img) return a;
+  return a+`<img src="${esc(n.img)}" alt="" loading="lazy" onerror="this.nextElementSibling&&this.nextElementSibling.remove();this.remove()"><span class="photo-cap">${esc(n.cap||"")}</span>`;
+}
+function chips(n){
+  const r={rel:"Relevante",maybe:"Quizás",no:"No por ahora"}[n.rel];
+  return `<span class="chip ${n.rel}">${r}</span>${n.isNew?'<span class="chip new">Nuevo en el radar</span>':''}<span class="chip">${esc(CAT[n.cat].label)}</span>`;
+}
+
+let filter=null;
+function render(){
+  const show=n=>!filter||n.rel===filter;
+  const rel=NEWS.filter(n=>n.rel==="rel");
+  document.getElementById("n-rel").textContent=rel.length;
+  document.getElementById("n-maybe").textContent=NEWS.filter(n=>n.rel==="maybe").length;
+  document.getElementById("n-no").textContent=NEWS.filter(n=>n.rel==="no").length;
+  const lead=rel.find(n=>n.lead);
+  const lw=document.getElementById("lead-wrap");
+  lw.innerHTML=lead&&show(lead)?`<button class="lead" data-id="${lead.id}"><div class="cover">${cover(lead,0)}</div><div class="txt"><div class="kicker">${chips(lead)}</div><h3 class="serif">${esc(lead.title)}</h3><div class="meta">${esc(lead.date)}, ${esc(lead.source)}</div><p class="dek">${esc(lead.dek)}</p><span class="more">Leer la nota completa</span></div></button>`:"";
+  document.getElementById("grid").innerHTML=rel.filter(n=>!n.lead&&show(n)).map((n,i)=>`<button class="story" data-id="${n.id}"><div class="cover">${cover(n,i+1)}</div><div class="txt"><div class="kicker">${chips(n)}</div><h3 class="serif">${esc(n.title)}</h3><div class="meta">${esc(n.date)}, ${esc(n.source)}</div><p class="dek">${esc(n.dek)}</p><span class="more">Ver todo</span></div></button>`).join("");
+  ["maybe","no"].forEach(k=>{
+    const items=NEWS.filter(n=>n.rel===k&&show(n));
+    document.getElementById("lbl-"+k).classList.toggle("hidden",!items.length);
+    document.getElementById("briefs-"+k).innerHTML=items.map((n,i)=>`<button class="brief" data-id="${n.id}"><div class="mini cover">${art(n.cat,i+9)}</div><div><div class="meta">${esc(n.date)}, ${esc(n.source)}</div><h4 class="serif">${esc(n.title)}</h4><p>${esc(n.dek)}</p></div></button>`).join("");
+  });
+  document.getElementById("breves").classList.toggle("hidden",filter==="rel");
+}
+
+const ICON={Congreso:'<path d="M4 20V9l8-5 8 5v11M9 20v-6h6v6"/>',Summit:'<path d="M3 12h4l3-8 4 16 3-8h4"/>',Hackathon:'<path d="M8 8l-5 4 5 4M16 8l5 4-5 4M14 5l-4 14"/>',Networking:'<circle cx="7" cy="8" r="3"/><circle cx="17" cy="8" r="3"/><path d="M2 20c0-3 2-5 5-5s5 2 5 5M12 20c0-3 2-5 5-5s5 2 5 5"/>'};
+function evIcon(t){return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON[t]||'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>'}</svg>`}
+let ek="all";
+function renderEvents(){
+  let html="",last="";
+  EVENTS.filter(e=>ek==="all"||e.kind.includes(ek)).forEach(e=>{
+    if(e.m!==last){html+=`<p class="month">${esc(e.m)}</p>`;last=e.m;}
+    html+=card(e);
+  });
+  document.getElementById("events").innerHTML=html;
+}
+function card(e){
+    const r=e.rel==="rel"?'<span class="chip rel">Relevante</span>':'<span class="chip maybe">Quizás</span>';
+    const det=e.details?`<details><summary>Lo que no te puedes perder</summary><ul>${e.details.map(d=>`<li>${esc(d)}</li>`).join("")}</ul></details>`:"";
+    const btn=e.cta?`<a class="join${e.primary?" primary":""}" href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.cta)}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>`:`<p class="noticket">Evento abierto, sin inscripción</p>`;
+    return `<article class="ev c-${e.color}"><div class="ev-head"><span class="ev-type">${evIcon(e.type)}${esc(e.type)}</span><span>${esc(e.date)}</span></div><div class="ev-in"><div class="pills">${r}</div><h3>${esc(e.title)}</h3><p class="where">${esc(e.where)}, ${esc(e.day)}</p><p>${esc(e.desc)}</p>${det}</div>${btn}</article>`;
+}
+function renderTop(){document.getElementById("events-top").innerHTML=EVENTS.filter(e=>e.rel==="rel").map(card).join("");}
+
+const dlg=document.getElementById("dlg");
+function openNews(id){
+  const n=NEWS.find(x=>x.id===id); if(!n) return;
+  const i=NEWS.indexOf(n);
+  document.getElementById("d-cover").innerHTML=`<button class="close" id="d-close" aria-label="Cerrar">×</button>`+cover(n,i);
+  document.getElementById("d-close").onclick=()=>dlg.close();
+  document.getElementById("d-kicker").innerHTML=chips(n);
+  document.getElementById("d-title").textContent=n.title;
+  document.getElementById("d-meta").textContent=`${n.date}, ${n.source}`;
+  document.getElementById("d-article").innerHTML=n.body.map(p=>`<p>${esc(p)}</p>`).join("");
+  document.querySelector("#d-why span").textContent=n.why;
+  document.querySelector("#d-next span").textContent=n.next;
+  document.getElementById("d-actions").innerHTML=`<a class="btn primary" href="${esc(n.url)}" target="_blank" rel="noopener">Leer el reportaje original</a>`+n.links.map(l=>`<a class="btn ghost" href="${esc(l[1])}" target="_blank" rel="noopener">${esc(l[0])}</a>`).join("");
+  dlg.showModal();
+}
+document.addEventListener("click",e=>{
+  const card=e.target.closest("[data-id]"); if(card){openNews(card.dataset.id);return;}
+  if(e.target===dlg) dlg.close();
+});
+document.querySelectorAll(".stat").forEach(b=>b.addEventListener("click",()=>{
+  filter=filter===b.dataset.f?null:b.dataset.f;
+  document.querySelectorAll(".stat").forEach(x=>x.setAttribute("aria-pressed",String(x.dataset.f===filter)));
+  render();
+}));
+document.querySelectorAll(".tabs button").forEach(b=>b.addEventListener("click",()=>{
+  ek=b.dataset.k;document.querySelectorAll(".tabs button").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));renderEvents();
+}));
+async function init(){
+  try{
+    const r=await fetch("data/latest.json",{cache:"no-store"});
+    if(!r.ok) throw new Error(r.status);
+    const d=await r.json();
+    NEWS=(d.noticias||[]).map(n=>({links:[],...n,cat:CAT[n.cat]?n.cat:"gov"}));
+    EVENTS=d.eventos||[];
+    document.getElementById("fecha").textContent=d.fecha_texto||d.fecha;
+    document.getElementById("edicion").textContent="Edición N.º "+(d.edicion||1);
+    document.getElementById("lede").textContent=d.lede||"";
+    document.getElementById("consultado").textContent="Fuentes públicas consultadas el "+(d.fecha_texto||d.fecha).replace(/^\S+\s/,"")+". ";
+    document.title="El Faro de la Salud · "+(d.fecha_texto||"");
+    if(!NEWS.some(n=>n.lead)){const f=NEWS.find(n=>n.rel==="rel");if(f)f.lead=true;}
+  }catch(e){
+    document.getElementById("lede").textContent="No se pudo cargar la edición de hoy. Recarga la página en unos minutos.";
+  }
+  render();renderEvents();renderTop();
+}
+init();
+</script>
+</body>
+</html>

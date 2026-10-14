@@ -1,0 +1,59 @@
+name: Edición diaria de El Faro de la Salud
+
+on:
+  schedule:
+    - cron: "30 10 * * *"   # 6:30 a. m. hora de Caracas (10:30 UTC), todos los días
+  workflow_dispatch: {}      # botón "Run workflow" para correrlo a mano
+  push:
+    branches: [main]         # si cambias el diseño, se vuelve a publicar
+    paths-ignore: ["data/**"]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: edicion-diaria
+  cancel-in-progress: false
+
+jobs:
+  generar:
+    if: github.event_name != 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Investigar y generar la edición
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/generar-edicion.mjs
+      - name: Guardar la edición en el repositorio
+        run: |
+          git config user.name "El Faro de la Salud"
+          git config user.email "faro-bot@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet && echo "Sin cambios" && exit 0
+          git commit -m "Edición del $(TZ=America/Caracas date +%F)"
+          git push
+
+  publicar:
+    needs: generar
+    if: always() && (needs.generar.result == 'success' || needs.generar.result == 'skipped')
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deploy
+        uses: actions/deploy-pages@v4
